@@ -1,0 +1,13 @@
+<% include _header %>
+
+<% if((currentZombie)&&(currentZombie.id === zombie.id)){%>
+    <a href="/edit" class="pull-right">Edita tu wea</a>
+<% } %>
+
+<h1><%=zombie.username%></h1>
+<h2>Se registo el <%= zombie.createdAt %></h2>
+
+<% if(zombie.bio){ %>
+    <p><%= zombie.bio %></p>
+<% } %>
+<% include _footer %>

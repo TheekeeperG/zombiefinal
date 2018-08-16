@@ -1,0 +1,22 @@
+<% include _header %>
+<h1>ARMAS UWUr</h1>
+<form action="/addweapon">
+    <input class="btn" type="submit" value="Añadir arma UwU" />
+</form>
+<br>
+<br>
+<% armas.forEach((arma)=>{%>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a><%=arma.descripcion%></a>
+        </div>
+        <div class="panel-body">
+            <%=arma.fuerza%>
+            <br>
+            <%=arma.categoria%>
+            <br>
+            <%=arma.municiones%>
+        </div>
+    </div>
+    <%})%>
+<% include _footer %>
